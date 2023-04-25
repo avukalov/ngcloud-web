@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+  <app-check-auth></app-check-auth>
+  <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-  title = 'ngcloud-web';
-}
+export class AppComponent {}
