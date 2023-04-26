@@ -9,6 +9,10 @@ const APP_ROUTES: Routes = [
     path: 'auth',
     loadChildren: () => import("./auth/auth.module").then(m => m.AuthModule)
   },
+  {
+    path: 'drive',
+    loadChildren: () => import("@app/drive/drive.module").then(m => m.DriveModule)
+  },
   // { path: '404', component: NotFoundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   // { path: '**', redirectTo: '/404', pathMatch: 'full' }

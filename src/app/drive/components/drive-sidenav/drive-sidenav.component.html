@@ -1,0 +1,16 @@
+<div fxLayout="column" class="drive-sidenav">
+  
+  <div fxLayout class="pt-1">
+    <button fxFlex="40%" mat-raised-button color="primary"  [matMenuTriggerFor]="menu">
+      <mat-icon class="me-1">add</mat-icon>New
+    </button>
+    
+    <mat-menu #menu="matMenu" class="mt-1">
+      <button mat-menu-item><mat-icon>create_new_folder</mat-icon>New folder</button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item><mat-icon>upload_file</mat-icon>File upload</button>
+      <button mat-menu-item><mat-icon>drive_folder_upload</mat-icon>Folder upload</button>
+    </mat-menu>
+  </div>
+</div>
+  

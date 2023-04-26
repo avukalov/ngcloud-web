@@ -1,0 +1,50 @@
+.drive-layout {
+    height: 100vh;
+    background: rgb(245,245,245);
+    background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.drive-toolbar {
+    padding-top: .5%;
+    background-color: transparent;
+}
+
+.drive-container {
+    width: 100%;
+    height: 93vh;
+    background-color: transparent;
+}
+
+.drive-sidenav-left {
+    width: 250px;
+    max-width: 250px;
+    background-color: transparent;
+    border: none;
+}
+
+.drive-info-sidenav {
+    width: 325px;
+    max-width: 325px;
+    border: none;
+    background-color: transparent;
+
+}
+
+.info-sidenav-inner {
+    width: 95%;
+    height: 100%;
+    background-color: white;
+    border-radius: 16px 16px 0 0;
+    padding: 20px;
+}
+
+.drive-router-outlet-container {
+    height: 100%;
+    background-color: white;
+    border-radius: 16px 16px 0 0;
+    margin: 0 15px 0 15px;
+}
+
+.title {
+    padding-top: 3%;
+}

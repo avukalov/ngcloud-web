@@ -1,0 +1,27 @@
+<div class="drive-layout">
+
+    <mat-toolbar fxLayout fxLayoutAlign="space-between" class="drive-toolbar">
+        <div>
+            <h2 class="title">NgCloud</h2>
+        </div>
+        <button mat-icon-button color="primary">
+            <mat-icon>info</mat-icon>
+        </button>
+    </mat-toolbar>
+        
+    <mat-drawer-container class="drive-container">
+        <mat-drawer opened mode="side" class="drive-sidenav-left">
+            <app-drive-sidenav></app-drive-sidenav>
+        </mat-drawer>
+        
+        <div fxLayout="column" class="drive-router-outlet-container">
+            <router-outlet></router-outlet>
+        </div>
+
+        <mat-drawer fxLayout="column" [opened]="infoBarOpened" mode="side" position="end" class="drive-info-sidenav" >
+            <app-info-sidebar></app-info-sidebar>
+        </mat-drawer>
+    </mat-drawer-container>
+    
+
+</div>
