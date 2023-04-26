@@ -10,6 +10,10 @@ import { DriveSidenavComponent } from './components/drive-sidenav/drive-sidenav.
 import { InfoSidebarComponent } from './components/info-sidebar/info-sidebar.component';
 import { MyDriveToolbarComponent } from './components/my-drive-toolbar/my-drive-toolbar.component';
 import { MyDriveListViewComponent } from './components/my-drive-list-view/my-drive-list-view.component';
+import { FileExplorerComponent } from './components/file-explorer/file-explorer.component';
+import { NewFolderDialogComponent } from './modals/new-folder-dialog/new-folder-dialog.component';
+import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,11 +24,14 @@ import { MyDriveListViewComponent } from './components/my-drive-list-view/my-dri
     DriveSidenavComponent,
     InfoSidebarComponent,
     MyDriveToolbarComponent,
-    MyDriveListViewComponent
+    MyDriveListViewComponent,
+    FileExplorerComponent,
+    NewFolderDialogComponent,
+    RenameDialogComponent
   ],
   imports: [
     CommonModule,
-
+    FormsModule,
     FlexLayoutModule,
     MaterialsModule,
     

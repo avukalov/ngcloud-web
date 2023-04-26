@@ -1,6 +1,17 @@
 
 <div fxLayout="column" class="p-2">
     <app-my-drive-toolbar></app-my-drive-toolbar>
+    <app-file-explorer
+        [fileElements]="fileElements | async"
+        [path]="currentPath"
+        [canNavigateUp]="canNavigateUp"
+        (folderAdded)="addFolder($event)"
+        (elementRemoved)="removeElement($event)"
+        (navigatedDown)="navigateToFolder($event)"
+        (navigatedUp)="navigateUp()"
+        (elementRenamed)="renameElement($event)"
+        (elementMoved)="moveElement($event)"
+    ></app-file-explorer>
     <!-- <app-my-drive-list-view></app-my-drive-list-view> -->
 </div>
 

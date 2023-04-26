@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@app/auth/auth.service';
 import { SidebarService } from '@app/drive/sidebar.service';
 
 @Component({
@@ -8,11 +9,16 @@ import { SidebarService } from '@app/drive/sidebar.service';
 })
 export class DriveLayoutComponent {
   showFiller = false;
-  infoBarOpened = true;
-  constructor(private sidebarService: SidebarService) {
+  infoBarOpened = false;
+
+  constructor(private sidebarService: SidebarService, public authService: AuthService) {
     this.sidebarService.toggleInfoBar.subscribe(() => {
       this.infoBarOpened = !this.infoBarOpened
     })
     
+  }
+
+  logout() {
+    this.authService.signOutRedirect();
   }
 }

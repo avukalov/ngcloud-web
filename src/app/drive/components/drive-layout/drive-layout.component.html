@@ -4,9 +4,14 @@
         <div>
             <h2 class="title">NgCloud</h2>
         </div>
-        <button mat-icon-button color="primary">
-            <mat-icon>info</mat-icon>
-        </button>
+
+        <div fxLayoutAlign="end center">
+            <button mat-icon-button color="primary">
+                <mat-icon>info</mat-icon>
+            </button>
+            <button *ngIf="(authService.authData | async) != null" mat-flat-button color="accent" (click)="logout()">Logout</button>
+        </div>
+        
     </mat-toolbar>
         
     <mat-drawer-container class="drive-container">

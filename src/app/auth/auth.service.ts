@@ -46,7 +46,7 @@ export class AuthService {
     this.userManager.signinRedirectCallback()
       .then((user) => {
         this.authData.next(user);
-        this.router.navigate(['/home'], { replaceUrl: true });
+        this.router.navigate(['/drive'], { replaceUrl: true });
         return user;
       });
 
