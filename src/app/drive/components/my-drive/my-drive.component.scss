@@ -1,4 +1,10 @@
-.example-toolbar{
-    background-color: white;
-}
+@use '@angular/material' as mat;
 
+@use '../../../../styles/variables' as vars;
+
+
+.my-drive-container {
+    height: vars.$content-height;
+    border-radius: 16px;
+    @include mat.elevation(0);
+}

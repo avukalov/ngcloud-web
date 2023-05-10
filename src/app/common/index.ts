@@ -1,1 +1,1 @@
-export * from './debugOperator'
+export * from './debug.rxjs.operator'

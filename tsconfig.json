@@ -26,6 +26,7 @@
     "paths": {
       "@app/*": ["app/*"],
       "@assets/*": ["assets/*"],
+      "@styles/*": ["styles/*"],
       "@env/*": ["environments/*"],
     }
   },
@@ -37,3 +38,4 @@
     "strictTemplates": true
   }
 }
+

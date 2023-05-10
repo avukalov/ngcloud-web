@@ -1,0 +1,10 @@
+@mixin rounded {
+    border-radius: 16px;
+    border: none;
+}
+
+@mixin transparent {
+    background-color: transparent;
+    border: none;
+}
+

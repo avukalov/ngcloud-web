@@ -1,5 +1,5 @@
 
-<div fxLayout="column" class="p-2">
+<mat-card fxLayout="column" class="my-drive-container">
     <app-my-drive-toolbar></app-my-drive-toolbar>
     <app-file-explorer
         [fileElements]="fileElements | async"
@@ -12,6 +12,13 @@
         (elementRenamed)="renameElement($event)"
         (elementMoved)="moveElement($event)"
     ></app-file-explorer>
+    <!-- <mat-card-content>
+        Hello!
+    </mat-card-content> -->
+</mat-card>
+
+<div fxLayout="column">
     <!-- <app-my-drive-list-view></app-my-drive-list-view> -->
+
 </div>
 

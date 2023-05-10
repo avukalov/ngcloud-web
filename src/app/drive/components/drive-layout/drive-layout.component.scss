@@ -1,50 +1,27 @@
-.drive-layout {
-    height: 100vh;
-    background: rgb(245,245,245);
-    background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%);
-}
 
-.drive-toolbar {
-    padding-top: .5%;
-    background-color: transparent;
-}
+@use '../../../../styles/variables' as vars;
+@use '../../../../styles/mixins' as mix;
+
 
 .drive-container {
-    width: 100%;
-    height: 93vh;
-    background-color: transparent;
+    height: calc(100vh - vars.$toolbar-height);
 }
 
-.drive-sidenav-left {
-    width: 250px;
-    max-width: 250px;
-    background-color: transparent;
+.drive-sidenav {
+    width: vars.$sidenav-width;
+    
+    @include mix.transparent;
+}
+
+.drive-sidebar {
     border: none;
-}
-
-.drive-info-sidenav {
-    width: 325px;
-    max-width: 325px;
-    border: none;
-    background-color: transparent;
-
-}
-
-.info-sidenav-inner {
-    width: 95%;
-    height: 100%;
-    background-color: white;
     border-radius: 16px 16px 0 0;
-    padding: 20px;
+    width: vars.$sidebar-width;
+    margin-right: 8px;
 }
 
 .drive-router-outlet-container {
     height: 100%;
-    background-color: white;
-    border-radius: 16px 16px 0 0;
-    margin: 0 15px 0 15px;
+    margin: 0 16px 0 8px;
 }
 
-.title {
-    padding-top: 3%;
-}

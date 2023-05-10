@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DriveLayoutComponent } from './components';
-import { MaterialsModule } from '@app/materials/materials.module';
+import { MaterialsModule } from '@app/materials.module';
 import { DriveRoutingModule } from './drive-routing.module';
 import { MyDriveComponent } from './components/my-drive/my-drive.component';
 import { SidebarService } from './sidebar.service';
@@ -14,6 +14,7 @@ import { FileExplorerComponent } from './components/file-explorer/file-explorer.
 import { NewFolderDialogComponent } from './modals/new-folder-dialog/new-folder-dialog.component';
 import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxAuthModule } from 'avstack-ngx-auth-dev';
 
 
 
@@ -27,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MyDriveListViewComponent,
     FileExplorerComponent,
     NewFolderDialogComponent,
-    RenameDialogComponent
+    RenameDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +36,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FlexLayoutModule,
     MaterialsModule,
     
+    // NgxAuthModule.forRoot({ configuration : {
+    //   clientId: "b76ac7b9-dfbf-4fab-86cb-598de7e2f7b9",
+    //   clientUri: 'http://localhost:4202',
+    //   authorityUri: "https://localhost:5005",
+
+    //   redirect_uri: "http://localhost:4202/auth/signin-callback",
+    //   silent_redirect_uri: "http://localhost:4202/assets/silent-callback.html",
+    //   post_logout_redirect_uri: "http://localhost:4202/auth/signout-callback",
+    // }}),    
+
     DriveRoutingModule
   ],
   providers: [SidebarService]

@@ -1,0 +1,19 @@
+@use "@angular/material" as mat;
+
+$ngcloud-dark-primary: mat.define-palette(mat.$purple-palette);
+$ngcloud-dark-accent: mat.define-palette(mat.$green-palette);
+$ngcloud-dark-warn: mat.define-palette(mat.$red-palette);
+
+$ngcloud-dark-theme: mat.define-dark-theme((
+ color: (
+   primary: $ngcloud-dark-primary,
+   accent: $ngcloud-dark-accent,
+   warn: $ngcloud-dark-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+.dark-theme {
+  @include mat.all-component-themes($ngcloud-dark-theme);
+}
