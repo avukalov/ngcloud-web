@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DriveModule } from './drive/drive.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AuthModule,
     HomeModule,
     DriveModule,
-    NgbModule
+    NgbModule,
+    StoreModule.forRoot({}, {})
     
   ],
   providers: [],
