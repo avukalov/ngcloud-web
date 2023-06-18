@@ -10,9 +10,9 @@ import { SidebarService } from '@app/drive/sidebar.service';
 })
 export class DriveLayoutComponent {
   showFiller = false;
-  infoBarOpened = true;
+  infoBarOpened = false;
 
-  isDark = this.styleManager.isDark;
+  isLight = this.styleManager.isLight;
 
   constructor(
     private styleManager: StyleManager,
@@ -22,15 +22,15 @@ export class DriveLayoutComponent {
     this.sidebarService.toggleInfoBar.subscribe(() => {
       this.infoBarOpened = !this.infoBarOpened
     })
-    
+
   }
 
   logout() {
     this.authService.signOutRedirect();
   }
 
-  toggleDarkTheme() {
-    this.styleManager.toggleDarkTheme();
-    this.isDark = !this.isDark;
+  toggleLightTheme() {
+    this.styleManager.toggleLightTheme();
+    this.isLight = !this.isLight;
   }
 }

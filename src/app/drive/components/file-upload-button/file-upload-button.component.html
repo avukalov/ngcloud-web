@@ -1,0 +1,11 @@
+<div>
+
+  <mat-form-field style="display: none;">
+    <mat-label>Select File</mat-label>
+    <input type="text" matInput>
+    <input type="file" #fileInput multiple (change)="onFileSelected($event)">
+  </mat-form-field>
+
+  <button mat-menu-item (click)="fileInput.click()"><mat-icon>upload_file</mat-icon>File upload</button>
+  <!-- <button mat-raised-button color="primary" (click)="fileInput.click()">Choose File</button> -->
+</div>

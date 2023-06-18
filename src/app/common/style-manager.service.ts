@@ -2,18 +2,22 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class StyleManager {
-  isDark = false;
+  isLight = false;
 
-  toggleDarkTheme() {
-    if (this.isDark) {
-      this.removeStyle('dark-theme');
-      document.body.classList.remove('dark-theme');
-      this.isDark = false;
+  toggleLightTheme() {
+    if (this.isLight) {
+      this.removeStyle('light-theme');
+      document.body.classList.remove('light-theme');
+      this.isLight = false;
     } else {
-      const href = 'dark-theme.css';
-      getLinkElementForKey('dark-theme').setAttribute('href', href);
-      document.body.classList.add('dark-theme');
-      this.isDark = true;
+      const href = 'light-theme.css';
+      const element = getLinkElementForKey('light-theme')
+      element.setAttribute('href', href);
+      element.setAttribute('rel', "stylesheet");
+      element.setAttribute('type', "text/css");
+
+      document.body.classList.add('light-theme');
+      this.isLight = true;
     }
   }
 

@@ -1,1 +1,1 @@
-export * from './drive-layout/drive-layout.component'
+export * from '../layouts/drive-layout/drive-layout.component'

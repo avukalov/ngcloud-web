@@ -24,17 +24,17 @@ export class AuthService {
     this.userManager.events.addSilentRenewError((error) => {
       // this.silentSignInError(error);
       console.log(error.name);
-      
+
     })
   }
 
-  public signInRedirect = (): Promise<void> => 
+  public signInRedirect = (): Promise<void> =>
     this.userManager.signinRedirect();
 
-  public signOutRedirect = (): Promise<void> => 
+  public signOutRedirect = (): Promise<void> =>
     this.userManager.signoutRedirect();
 
-  public signoutRedirectCallback = (): Promise<SignoutResponse> => 
+  public signoutRedirectCallback = (): Promise<SignoutResponse> =>
     this.userManager.signoutRedirectCallback()
       .then((res) => {
         this.authData.next(null);
@@ -42,47 +42,52 @@ export class AuthService {
         return res;
       });;
 
-  public signinRedirectCallback = (): Promise<User> => 
+  public signinRedirectCallback = (): Promise<User> =>
     this.userManager.signinRedirectCallback()
       .then((user) => {
         this.authData.next(user);
         this.router.navigate(['/drive'], { replaceUrl: true });
         return user;
-      });
+      }).catch((error) => {
+        this.signInError(error);
+        return error;
+      });;
 
-  public silentSignIn = (): Promise<User | null> => 
+  public silentSignIn = (): Promise<User | null> =>
     this.userManager.signinSilent()
       .then((user) => {
         this.authData.next(user);
         return user;
       }).catch((error) => {
-        this.silentSignInError(error);
+        this.signInError(error);
         return error;
       });
-  
-  public getUser = (): Promise<User | null | undefined> => 
+
+  public getUser = (): Promise<User | null | undefined> =>
     this.userManager.getUser().then(user => {
-      
       console.log("getUser from service", user);
-      if(user)
+
+      if (user)
         this.authData.next(user);
 
       return user;
     });
 
-  public silentSignInError = (error: ErrorResponse): Promise<ErrorResponse | void | undefined> => {
-  
-    console.log("AuthService.silentSignInError.ErrorResponse", error.message);
-    
-    if(error && error.message 
+  public signInError = (error: ErrorResponse): Promise<ErrorResponse | void | undefined> => {
+
+    if (error && error.message && error.message === "access_denied") {
+      this.router.navigate(["/home"], { replaceUrl: true })
+    }
+
+    if (error && error.message
       && this.errorResponsesRequiringUserInteraction.indexOf(error.message) >= 0) {
-        return this.signInRedirect();
-      }
+      return this.signInRedirect();
+    }
 
     return new Promise((resolve, reject) => resolve(undefined));
   }
 
-  public saveToLocalStorage(user: User){
+  public saveToLocalStorage(user: User) {
     console.log("saveToLocalStorage", user);
   }
 
@@ -90,6 +95,6 @@ export class AuthService {
     'interaction_required',
     'login_required',
     'account_selection_required',
-    'consent_required',
+    // 'consent_required',
   ];
 }

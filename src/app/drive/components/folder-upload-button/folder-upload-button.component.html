@@ -1,0 +1,12 @@
+<div>
+
+  <mat-form-field style="display: none;">
+    <mat-label>Select Folder</mat-label>
+    <input type="text" matInput>
+    <input type="file" #folderInput webkitdirectory directory multiple (change)="onFolderSelect($event)">
+  </mat-form-field>
+
+  <button mat-menu-item (click)="folderInput.click()"><mat-icon>drive_folder_upload</mat-icon>Folder upload</button>
+  <!-- <button mat-menu-item ><mat-icon>upload_file</mat-icon>File upload</button> -->
+  <!-- <button mat-raised-button color="primary" (click)="fileInput.click()">Choose File</button> -->
+</div>

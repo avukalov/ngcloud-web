@@ -9,7 +9,7 @@ import { FileElement } from '@app/drive/models';
   templateUrl: './file-explorer.component.html',
   styleUrls: ['./file-explorer.component.scss']
 })
-export class FileExplorerComponent {
+export class ExFileplorerComponent {
   @Input() fileElements!: FileElement[] | null;
   @Input() canNavigateUp!: boolean;
   @Input() path!: string;

@@ -10,18 +10,17 @@ $ngcloud-light-warn: mat.define-palette(mat.$red-palette);
 $ngcloud-light-background: rgb(218, 15, 15);
 
 
-$ngcloud-light-theme: mat.define-light-theme((
- color: (
-   primary: $ngcloud-light-primary,
-   accent: $ngcloud-light-accent,
-   warn: $ngcloud-light-warn,
- ),
- typography: mat.define-typography-config(),
- density: 0,
-));
+$ngcloud-light-theme: mat.define-light-theme((color: (primary: $ngcloud-light-primary,
+        accent: $ngcloud-light-accent,
+        warn: $ngcloud-light-warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
 
-@include mat.all-component-themes($ngcloud-light-theme);
-
+.light-theme {
+  @include mat.all-component-colors($ngcloud-light-theme);
+}
 
 
 // @include mat.core-theme($ngcloud-light-theme);

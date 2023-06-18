@@ -1,7 +1,8 @@
 
 <mat-card fxLayout="column" class="my-drive-container">
     <app-my-drive-toolbar></app-my-drive-toolbar>
-    <app-file-explorer
+    <router-outlet></router-outlet>
+    <!-- <app-file-explorer
         [fileElements]="fileElements | async"
         [path]="currentPath"
         [canNavigateUp]="canNavigateUp"
@@ -11,7 +12,7 @@
         (navigatedUp)="navigateUp()"
         (elementRenamed)="renameElement($event)"
         (elementMoved)="moveElement($event)"
-    ></app-file-explorer>
+    ></app-file-explorer> -->
     <!-- <mat-card-content>
         Hello!
     </mat-card-content> -->

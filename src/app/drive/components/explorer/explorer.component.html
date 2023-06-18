@@ -1,0 +1,16 @@
+<div fxLayout>
+    <mat-selection-list #shoes cdkDropList id="list-1" (cdkDropListDropped)="drop($event)">
+        <mat-list-option [selected]="" *ngFor="let f of folders" cdkDrag>
+          {{f.foldername}}
+        </mat-list-option>
+        <mat-list-option [id]="f.id" *ngFor="let f of files" cdkDrag>
+            {{f.filename}}
+          </mat-list-option>
+    </mat-selection-list>
+    <!-- <div *ngFor="let f of folders">
+        <app-explorer-folder [folder]="f"></app-explorer-folder>
+    </div>
+    <div *ngFor="let f of files">
+        <app-explorer-file [file]="f"></app-explorer-file>
+    </div> -->
+</div>

@@ -2,8 +2,8 @@ import { UserManagerSettings } from "oidc-client-ts";
 
 export class AuthConfig {
   public static clientUri = "http://localhost:4202";
-  public static authorityUri = "https://localhost:5005";
-  public static clientId = "b76ac7b9-dfbf-4fab-86cb-598de7e2f7b9";
+  public static authorityUri = "https://localhost:5001";
+  public static clientId = "697c1f2d-457d-4bde-a992-82a9f806e85c";
 
   public static get clientSettings(): UserManagerSettings {
     return {
