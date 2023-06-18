@@ -12,7 +12,6 @@ import { ExFileplorerComponent } from './components/file-explorer-example/file-e
 import { NewFolderDialogComponent } from './modals/new-folder-dialog/new-folder-dialog.component';
 import { RenameDialogComponent } from './modals/rename-dialog/rename-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgxAuthModule } from 'avstack-ngx-auth-dev';
 import { ExplorerComponent, ExplorerFileComponent, ExplorerFolderComponent } from './components/explorer/explorer.component';
 import { FileUploadButtonComponent } from './components/file-upload-button/file-upload-button.component';
 import { HttpClientModule } from "@angular/common/http";

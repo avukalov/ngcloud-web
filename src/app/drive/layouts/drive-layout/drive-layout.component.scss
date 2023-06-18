@@ -1,27 +1,29 @@
-
-@use '../../../../styles/variables' as vars;
-@use '../../../../styles/mixins' as mix;
+@use 'variables' as vars;
+@use 'mixins' as mix;
 
 
 .drive-container {
-    height: calc(100vh - vars.$toolbar-height);
+  height: calc(100vh - vars.$toolbar-height);
 }
 
 .drive-sidenav {
-    width: vars.$sidenav-width;
-    
-    @include mix.transparent;
+  width: vars.$sidenav-width;
+
+  @include mix.transparent;
 }
 
 .drive-sidebar {
-    border: none;
-    border-radius: 16px 16px 0 0;
-    width: vars.$sidebar-width;
-    margin-right: 8px;
+  border: none;
+  border-radius: 16px 16px 0 0;
+  width: vars.$sidebar-width;
+  margin-right: 8px;
 }
 
 .drive-router-outlet-container {
-    height: 100%;
-    margin: 0 16px 0 8px;
+  height: 100%;
+  margin: 0 16px 0 8px;
 }
 
+.brand {
+  cursor: pointer;
+}

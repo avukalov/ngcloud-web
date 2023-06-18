@@ -1,17 +1,17 @@
-@use '../../../../styles/variables' as vars;
+@use 'variables' as vars;
 
 .sidebar-toolbar {
-    padding: 0.2em 1em;
-    height: vars.$toolbar-height;
-    // max-height: 2 * vars.$toolbar-height;
+  padding: 0.2em 1em;
+  height: vars.$toolbar-height;
+  // max-height: 2 * vars.$toolbar-height;
 }
 
 .selected-element-title {
-    display: inline-block;
-    width: 205px;
+  display: inline-block;
+  width: 205px;
 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
 }

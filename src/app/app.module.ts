@@ -7,7 +7,6 @@ import { AuthModule } from './auth';
 import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DriveModule } from './drive/drive.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StoreModule } from '@ngrx/store';
 
 @NgModule({
@@ -17,15 +16,14 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    
+
     AppRoutingModule,
-    
+
     AuthModule,
     HomeModule,
     DriveModule,
-    NgbModule,
     StoreModule.forRoot({}, {})
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

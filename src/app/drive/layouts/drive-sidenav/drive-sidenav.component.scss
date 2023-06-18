@@ -1,34 +1,32 @@
 // @use '@angular/material/theming' as theming;
 // @use '@angular/material' as mat;
-@use '../../../../styles/variables' as vars;
+@use 'variables' as vars;
 
 
 // $theme-accent: mat.define-palette(mat.$cyan-palette);
 
 ul {
-    padding-left: 1em;
+  padding-left: 1em;
 
-    li {
-        width: 100%;
-        padding: .2em 0 .2em 0;
-        font-size: .9em;
-        list-style-type: none;
-        &:hover {
-            cursor: pointer;
-            color: black;
-            background-color: vars.$grey-hover-color;
-            border-radius: 5em;
-        }
+  li {
+    width: 100%;
+    padding: .2em 0 .2em 0;
+    font-size: .9em;
+    list-style-type: none;
 
-        mat-icon {
-            padding: 0 .5em  0 .7em;
-        }
+    &:hover {
+      cursor: pointer;
+      color: black;
+      background-color: vars.$grey-hover-color;
+      border-radius: 5em;
     }
+
+    mat-icon {
+      padding: 0 .5em 0 .7em;
+    }
+  }
 }
 
 
-  
+
 // }
-
-
-

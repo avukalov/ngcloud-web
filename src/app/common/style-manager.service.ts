@@ -13,8 +13,6 @@ export class StyleManager {
       const href = 'light-theme.css';
       const element = getLinkElementForKey('light-theme')
       element.setAttribute('href', href);
-      element.setAttribute('rel', "stylesheet");
-      element.setAttribute('type', "text/css");
 
       document.body.classList.add('light-theme');
       this.isLight = true;
@@ -42,6 +40,7 @@ function getExistingLinkElementByKey(key: string) {
 function createLinkElementWithKey(key: string) {
   const linkEl = document.createElement('link');
   linkEl.setAttribute('rel', 'stylesheet');
+  linkEl.setAttribute('type', "text/css")
   linkEl.classList.add(getClassNameForKey(key));
   document.head.appendChild(linkEl);
   return linkEl;

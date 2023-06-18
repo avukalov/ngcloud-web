@@ -1,14 +1,8 @@
 @use "@angular/material" as mat;
 
-
-
 $ngcloud-light-primary: mat.define-palette(mat.$deep-purple-palette);
 $ngcloud-light-accent: mat.define-palette(mat.$amber-palette);
 $ngcloud-light-warn: mat.define-palette(mat.$red-palette);
-
-// $ngcloud-light-background: linear-gradient(180deg, rgb(146, 146, 146) 0%, rgba(255,255,255,1) 100%);
-$ngcloud-light-background: rgb(218, 15, 15);
-
 
 $ngcloud-light-theme: mat.define-light-theme((color: (primary: $ngcloud-light-primary,
         accent: $ngcloud-light-accent,
@@ -22,6 +16,7 @@ $ngcloud-light-theme: mat.define-light-theme((color: (primary: $ngcloud-light-pr
   @include mat.all-component-colors($ngcloud-light-theme);
 }
 
+// This is recommended way
 
 // @include mat.core-theme($ngcloud-light-theme);
 // @include mat.button-theme($ngcloud-light-theme);
